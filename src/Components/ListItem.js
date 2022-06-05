@@ -9,11 +9,8 @@ import {
   increaseCount,
   decreaseCount,
 } from '../Slices/listSlice'
-// IoClose
-// RiSubtractFill
-// MdAdd
+
 const ListItem = ({ title, count, id, completed }) => {
-  // const { itemList } = useSelector((store) => store.list)
   const dispatch = useDispatch()
   return (
     <div className='list-item'>

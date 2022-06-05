@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 
-// import { createSlice } from '@reduxjs/toolkit'
 import { useSelector, useDispatch } from 'react-redux'
 import { Header, InputSection, MainList } from './Components'
 import { getFilteredList } from './Slices/listSlice'
