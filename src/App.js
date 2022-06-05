@@ -1,6 +1,23 @@
+import React, { useEffect } from 'react'
+
 // import { createSlice } from '@reduxjs/toolkit'
+import { useSelector, useDispatch } from 'react-redux'
+import { Header, InputSection, MainList } from './Components'
+import { getFilteredList } from './Slices/listSlice'
 function App() {
-  return <main className='main-app'></main>
+  const { itemList } = useSelector((store) => store.list)
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(getFilteredList())
+  }, [itemList])
+  return (
+    <main className='main-app'>
+      <Header />
+      <InputSection />
+      <MainList />
+    </main>
+  )
 }
 
 export default App
